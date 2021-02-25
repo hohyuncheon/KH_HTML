@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css - paragraph</title>
+  </head>
+  <body>
+    <h1>문단</h1>
+    <div class="wrapper">
+      <p>
+        Magnam nostrum necessitatibus quod hic cumque quae, libero voluptas illo
+        officiis unde, assumenda explicabo adipisci qui vero corrupti odit vel
+        fuga cum atque officia iure mollitia. Expedita adipisci velit officia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        possimus quibusdam, distinctio numquam autem exercitationem ab rerum
+        esse libero tempora eveniet recusandae dolores quia perferendis, vero
+        maiores atque ratione. Ullam. Magnam nostrum necessitatibus quod hic
+        cumque quae, libero voluptas illo officiis unde, assumenda explicabo
+        adipisci qui vero corrupti odit vel fuga cum atque officia iure
+        mollitia. Expedita adipisci velit officia. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Explicabo possimus quibusdam, distinctio
+        numquam autem exercitationem ab rerum esse libero tempora eveniet
+        recusandae dolores quia perferendis, vero maiores atque ratione. Ullam.
+      </p>
+      <p>
+        Magnam nostrum necessitatibus quod hic cumque quae, libero voluptas illo
+        officiis unde, assumenda explicabo adipisci qui vero corrupti odit vel
+        fuga cum atque officia iure mollitia. Expedita adipisci velit officia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        possimus quibusdam, distinctio numquam autem exercitationem ab rerum
+        esse libero tempora eveniet recusandae dolores quia perferendis, vero
+        maiores atque ratione. Ullam.
+      </p>
+      <p>
+        Magnam nostrum necessitatibus quod hic cumque quae, libero voluptas illo
+        officiis unde, assumenda explicabo adipisci qui vero corrupti odit vel
+        fuga cum atque officia iure mollitia. Expedita adipisci velit officia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        possimus quibusdam, distinctio numquam autem exercitationem ab rerum
+        esse libero tempora eveniet recusandae dolores quia perferendis, vero
+        maiores atque ratione. Ullam.
+      </p>
+      <p>
+        Magnam nostrum necessitatibus quod hic cumque quae, libero voluptas illo
+        officiis unde, assumenda explicabo adipisci qui vero corrupti odit vel
+        fuga cum atque officia iure mollitia. Expedita adipisci velit officia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        possimus quibusdam, distinctio numquam autem exercitationem ab rerum
+        esse libero tempora eveniet recusandae dolores quia perferendis, vero
+        maiores atque ratione. Ullam.
+      </p>
+      <p>
+        Magnam nostrum necessitatibus quod hic cumque quae, libero voluptas illo
+        officiis unde, assumenda explicabo adipisci qui vero corrupti odit vel
+        fuga cum atque officia iure mollitia. Expedita adipisci velit officia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        possimus quibusdam, distinctio numquam autem exercitationem ab rerum
+        esse libero tempora eveniet recusandae dolores quia perferendis, vero
+        maiores atque ratione. Ullam.
+      </p>
+    </div>
+    <style>
+      /* 첫글자 크기 키우기 */
+      /* .wrapper p::first-letter {
+        font-size: 2em;
+      } */
+      /* 첫째줄 밑줄 */
+      /* .wrapper p::first-line {
+        text-decoration: underline;
+      } */
+
+      /* /* 맨앞에 이모지달기 */
+      /* .wrapper p::before {
+        content: "😊";
+      } */
+
+      /* 맨뒤에 이모지달기 */
+      /* .wrapper p::after {
+        content: "👀";
+      } */
+
+      /* 카운터 */
+      /* 부모요소에서 선언 */
+      .wrapper {
+        counter-reset: num;
+      }
+      .wrapper p::before {
+        counter-increment: num;
+        content: counter(num) ". ";
+      }
+      /* 클릭 드래그했을때 블럭잡을때 */
+      ::selection {
+        background-color: blueviolet;
+        color: #fff;
+      }
+    </style>
+  </body>
+</html>

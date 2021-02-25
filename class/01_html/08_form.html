@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <!-- 사용자입력을 받는태ㄱ, -->
+    <h1>form 관련</h1>
+
+    <!-- 
+    action : 폼이 제출될 server측 주소. 미작성시, 현재주소로 제출됨.
+    method : GET(기본값) | POST
+      1. GET http://127.0.0.1:5500/08_form.html?userEmail=ssss%40naver.com 
+              url에 덧붙에 전송
+      2. POST http메세지 body영역에 작성. url에 노출되지 않는다. 
+    
+    *input태그의 name속성이 제출되는 key값이다.
+    *name 속성이 없으면 제출되지 않는다.
+  -->
+    <form action="" method="GET">
+      <label for="userEmail">이메일</label>
+      <input type="text" name="userEmail" id="userEmail" />
+      <br />
+      <label for="userName">이름</label>
+      <input type="text" name="user-name" id="userName" />
+      <br />
+      <input type="submit" value="제출" />
+    </form>
+
+    <h2>text관련</h2>
+    <form action="">
+      <!--filedset 은 묶어주는 상자생김-->
+      <fieldset>
+        <legend>회원정보</legend>
+
+        <!--한줄짜리 사용자입력을 처리-->
+        <!--
+              placeholder입력전 보여질내용
+              value 초기값
+              readonly 편집불가
+              required 필수라는뜻 이게 안되면 제출 x-->
+        <input
+          type="text"
+          name="memberName"
+          id="memberName"
+          placeholder="회원명"
+          value="홍길동"
+          readonly
+          required
+        />
+        <br />
+
+        <!--
+              maxlength 최대글자
+          -->
+        <input type="password" name="memberPwd" id="memberPwd" maxlength="8" />
+      </fieldset>
+
+      <fieldset>
+        <legend>기타정보</legend>
+        <input
+          type="search"
+          name="searchKeyword"
+          id="searchKeyword"
+          placeholder="검색어를 입력하시오"
+        />
+
+        <br /><br />
+        <input type="email" name="memberEmail" id="memberEmail" />
+
+        <br /><br />
+        <input type="url" name="memberHomepage" id="memberHomepage" />
+
+        <br /><br />
+        <!--핸드폰에서 숫자키보드를 제공-->
+        <!--resize:none 크기변경불가-->>
+        <input type="tel" name="memberTel" id="memberTel" />
+
+        <legend>자기소개</legend>
+        <textarea
+          name="selfIntroduce"
+          id="selfIntroduce"
+          cols="30"
+          rows="10"
+          style="resize: none"
+        >
+안녕
+            잘가
+            반가웠어
+
+        </textarea>
+
+        <br /><br />
+        <!--버튼 만드는방법 1-->
+        <!--input:submit-->
+        <!-- 
+        <input type="submit" value="제출">
+        <input type="button" value="그냥 버튼">
+        <input type="reset" value="초기화버튼"> -->
+
+        <!--버튼 만드는방법 2-->
+        <!--type속성을 반드시 사용할 것  type = "submit" 기본값이므로 제출될 수 있다.-->
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+        <button type="button">그냥버튼</button>
+      </fieldset>
+    </form>
+
+    <h2>숫자관련</h2>
+    <!--
+      max최대 
+      min 최소
+      step 숫자 올릴시 5씩증가
+        -->
+    <form action="">
+      <fieldset>
+        <legend>숫자</legend>
+        <input
+          type="number"
+          name="point"
+          id="point"
+          max="100"
+          min="0"
+          step="5"
+          style="width: 100px"
+        />
+
+        <br /><br />
+        <!--input:range[max=100][min=0] 대괄호는는 속성-->
+        <input
+          type="range"
+          name="userAmount"
+          id="userAmount"
+          max="100"
+          min="1"
+        />
+
+        <button type="submit">제출</button>
+      </fieldset>
+    </form>
+
+    <br /><br />
+    <h2>날짜/시간관련</h2>
+    <form action="">
+      <fieldset>
+        <legend>날짜/시간</legend>
+        <label for="birthday">생일</label>
+        <input type="date" name="birthday" id="birthday" value="2020-01-01" />
+        <br />
+        <label for="reservation">예약</label>
+        <input type="time" name="reservation" id="reservation" value="21:30" />
+        <br />
+        <label for="kakao-reserv">카카오 미용실 예약</label>
+        <input type="datetime-local" name="kakao_reserv" id="kakao_reserv"
+        value="2020-01-01T13:30"
+        <!--날짜/시간 표준 포멧 iso-8601 yyyy-mm-ddThh:mi-->
+        />
+      </fieldset>
+
+      <input type="submit" value="제출" />
+    </form>
+
+    <h2>선택관련</h2>
+    <form action="">
+      <fieldset>
+        <legend>라디오</legend>
+
+        <input type="radio" name="gender" id="gender-male" value="m" />
+        <label for="gender-male">남</label>
+        <input type="radio" name="gender" id="gender-female" value="f" />
+        <label for="gender-male">여</label>
+      </fieldset>
+      <fieldset>
+        <!--checked는 미리 체크됨-->
+        <legend>체크박스</legend>
+        <input
+          type="checkbox"
+          name="hobby"
+          id="hobby-music"
+          value="music"
+          checked
+        />
+        <label for="hobby-music">음악감상</label>
+        <input type="checkbox" name="hobby" id="hobby-game" value="game" />
+        <label for="hobby-game">게임</label>
+        <input
+          type="checkbox"
+          name="hobby"
+          id="hobby-fitness"
+          value="fitness"
+        />
+        <label for="hobby-music">운동</label>
+
+        <br />
+        <label for="mailok">메일수신</label>
+        <input type="checkbox" name="mailok" id="mailok" />
+        <!-- value 속성이 없다면, 체크시에 "on" 값이 전송된다 -->
+      </fieldset>
+
+      <fieldset>
+        <legend>select</legend>
+        <label for="nation">국적 : </label>
+        <select name="nation" id="nation" multiple>
+          <optgroup label="America">
+            <option value="usa" selected>미국</option>
+          </optgroup>
+          <optgroup label="Asia">
+            <option value="kor">한국</option>
+            <option value="jap">일본</option>
+            <option value="chn">중국</option>
+          </optgroup>
+        </select>
+        <br />
+
+        <label for="menu">메뉴 선택 : </label>
+        <!-- datalist : select + input:text -->
+        <input type="text" name="menu" id="menu" list="menu-list" />
+        <datalist id="menu-list">
+          <option value="된장찌게">된장찌게</option>
+          <option value="김치찌게">김치찌게</option>
+          <option value="순두부찌게">순두부찌게</option>
+        </datalist>
+      </fieldset>
+
+      <input type="submit" value="제출" />
+    </form>
+
+    <form action="">
+      <fieldset>
+        <legend>기타</legend>
+        <label for="userColor">컬러 : </label>
+        <!--input:color#userColor = id값 넣어줌-->
+
+        <input type="color" name="userColor" id="userColor" value="#c900cc" />
+        <br /><br />
+        <label for="upFile">파일업로드 : </label>
+        <!-- input:file#upFile[name=upFile] -->
+        <input type="file" name="upFile" id="upFile" />
+        <br />
+        <input
+          type="hidden"
+          name="notVisible"
+          value="저는 안보이지만, 전송은 됩니다"
+        />
+        <input
+          type="text"
+          name="userId"
+          id="userId"
+          value="이건전송안됩니다disabled"
+          disabled
+        />
+      </fieldset>
+      <!--결과값 앞자리 %23은 #이다-->
+      <input type="submit" value="제출" />
+    </form>
+  </body>
+</html>
