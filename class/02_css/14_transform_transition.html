@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css - transfrom | transition</title>
+  </head>
+  <body>
+    <h1>transform</h1>
+
+    <div class="wrapper">
+      <img src="sample/image/flower1.PNG" class="transform-translate" />
+      <hr />
+      <img src="sample/image/flower2.PNG" class="transform-scale" />
+      <hr />
+      <img src="sample/image/flower3.PNG" class="transform-rotate" />
+      <hr />
+    </div>
+    <style>
+      .transform-rotate:hover {
+        /* 얼마나 돌려줄까 */
+        transform: rotate(90deg);
+      }
+
+      .transform-scale:hover {
+        /* 얼마나 크게 만들어줄까 */
+        transform: scale(1.5, 1.5);
+      }
+
+      .transform-translate:hover {
+        /* 하나의상태를 표현 */
+        /* 이동 */
+        /* transform: translateX(50px);
+        transform: translateY(50px); */
+        transform: translate(50px, 50px);
+        border: 10px solid lightgreen;
+      }
+
+      .wrapper {
+        text-align: center;
+      }
+      .wrapper img {
+        width: 250px;
+      }
+    </style>
+
+    <h1>transition</h1>
+    <div class="wrapper">
+      <img
+        src="sample/image/flower1.PNG"
+        class="transition transform-translate"
+      />
+      <hr />
+      <img src="sample/image/flower2.PNG" class="transition transform-scale" />
+      <hr />
+      <img src="sample/image/flower3.PNG" class="transition transform-rotate" />
+      <hr />
+    </div>
+    <style>
+      .transition {
+        transition-duration: 1s;
+        /* transition 적용할 속성. 기본값 all */
+        /* 한정해서 효과를 주는 프로퍼티 */
+        transition-property: border;
+        transition-delay: 0.5s;
+        /* 속도곡선 점점빠르게 효과 등*/
+        transition-timing-function: ease;
+      }
+    </style>
+
+    <div class="tile">
+      <h1>코로나19바이러스</h1>
+      <h2 class="text-transition">코로나19 드디어 배신으로 잠재우다</h2>
+      <p class="text-transition">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iste
+        mollitia nam odit error animi exercitationem. Vero itaque est dolor
+        voluptatum odio maiores doloribus expedita, dolorum ipsam saepe. Sed,
+        rerum?
+      </p>
+    </div>
+    <div class="tile">
+      <h1>코로나19바이러스</h1>
+      <h2 class="text-transition">코로나19 드디어 배신으로 잠재우다</h2>
+      <p class="text-transition">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iste
+        mollitia nam odit error animi exercitationem. Vero itaque est dolor
+        voluptatum odio maiores doloribus expedita, dolorum ipsam saepe. Sed,
+        rerum?
+      </p>
+    </div>
+    <div class="tile">
+      <h1>코로나19바이러스</h1>
+      <h2 class="text-transition">코로나19 드디어 배신으로 잠재우다</h2>
+      <p class="text-transition">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iste
+        mollitia nam odit error animi exercitationem. Vero itaque est dolor
+        voluptatum odio maiores doloribus expedita, dolorum ipsam saepe. Sed,
+        rerum?
+      </p>
+    </div>
+    <div class="tile">
+      <h1>코로나19바이러스</h1>
+      <h2 class="text-transition">코로나19 드디어 배신으로 잠재우다</h2>
+      <p class="text-transition">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iste
+        mollitia nam odit error animi exercitationem. Vero itaque est dolor
+        voluptatum odio maiores doloribus expedita, dolorum ipsam saepe. Sed,
+        rerum?
+      </p>
+    </div>
+
+    <style>
+      .tile {
+        width: 380px;
+        height: 380px;
+        margin: 10px;
+        padding: 30px;
+        background-color: #99aeff;
+        box-shadow: 0px 35px 77px -17 rgba(0, 0, 0, 0.4);
+        color: white;
+        overflow: hidden;
+        display: inline-block;
+      }
+      .tile h1 {
+        font-weight: 200;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+      }
+      .tile h2 {
+        font-weight: 200;
+        margin: 20px 0 0 0;
+        font-style: italic;
+        transform: translateX(380px);
+      }
+      .tile p {
+        font-weight: 200;
+        margin: 20px 0 0 0;
+        transform: translateX(-380px);
+        transition-delay: 0.4s;
+      }
+      .text-transition {
+        opacity: 0.2;
+        transition: all 0.6s ease-out;
+      }
+      .tile:hover {
+        box-shadow: 0px 35px 77px -17 rgba(0, 0, 0, 0.6);
+      }
+      .tile:hover .text-transition {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    </style>
+
+    div
+    <div class="img-wrapper">
+      <img src="sample/image/hyunta.jpg" alt="" />
+    </div>
+    <style>
+      .img-wrapper {
+        width: 300px;
+        padding: 5px;
+        border: 1px solid gray;
+        overflow: hidden;
+      }
+      .img-wrapper img {
+        width: 100%;
+        transition: 0.8s;
+      }
+      .img-wrapper:hover img {
+        transform: scale(1.2, 1.2);
+      }
+    </style>
+  </body>
+</html>
