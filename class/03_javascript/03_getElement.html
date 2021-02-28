@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js - element</title>
+  </head>
+  <body>
+    <h1>Get Element</h1>
+    <!-- ul>li#myli$.group{요소$}*5 -->
+    <ul>
+      <li id="myli1" class="group">요소1</li>
+      <li id="myli2">요소2</li>
+      <li id="myli3" class="group">요소3</li>
+      <li id="myli4">요소4</li>
+      <li id="myli5" class="group">요소5</li>
+    </ul>
+    <input type="button" value="id" onclick="test1();" />
+    <input type="button" value="tag name" onclick="test2();" />
+    <input type="button" value="class name" onclick="test3();" />
+    <script>
+      //elements 태그네임이나 클레스로 찾으면 복수개라 s붙여야됨.
+      //getElementsByTagName는 복수개의 요소를 가진 배열객체(짜가)를 리턴한다.
+      function test2() {
+        var liArr = document.getElementsByTagName("li");
+        // console.log(liArr);
+        // console.log(liArr[0]);
+        // console.log(liArr[1]);
+        // console.log(liArr[2]);
+        // console.log(liArr[3]);
+        // console.log(liArr[4]);
+        var b = 50;
+        for (var i = 0; i < liArr.length; i++) {
+          console.log(liArr[i]);
+          liArr[i].style.color = "rgb(130, 220, " + b + ")";
+          b += 50;
+        }
+      }
+
+      function test1() {
+        var li = document.getElementById("myli1");
+        console.log(li); //태그객체
+        //dir객체구조로 열람
+        console.dir(li);
+        // 스타일 속성변경
+        li.style.color = "#fff";
+        li.style.backgroundColor = "magenta";
+      }
+    </script>
+  </body>
+</html>
