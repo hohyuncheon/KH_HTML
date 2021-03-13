@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,8 +7,8 @@
     <title>js - io</title>
     <script>
       function init() {
-        alert("DOM작업이 완료되었습니다.");
-        document.write("<h1>새로쓰기</h1>");
+        // alert("DOM작업이 완료되었습니다.");
+        // document.write("<h1>새로쓰기</h1>");
       }
     </script>
   </head>
@@ -61,13 +61,21 @@
        * - getter : html이 포함된 content를 리턴
        * - setter : 주어진 문자열을 html로 파싱해서 처리
        */
+      //간략버젼
       function test3() {
         var str = prompt(".wrapper태그 내용을 입력하세요.");
-        console.log(str); //<h1>안녕</h1>
         var wrapper = document.querySelector(".wrapper");
         wrapper.innerHTML = str; // setter
-        console.log(wrapper.innerHTML); // getter
       }
+
+      //수업버젼
+      //   function test3() {
+      //     var str = prompt(".wrapper태그 내용을 입력하세요.");
+      //     console.log(str); //<h1>안녕</h1>
+      //     var wrapper = document.querySelector(".wrapper");
+      //     wrapper.innerHTML = str; // setter
+      //     console.log(wrapper.innerHTML); // getter
+      //   }
 
       /**
        * innerText : 태그안의 content. 텍스트
@@ -75,10 +83,10 @@
        * - setter : html태그로 parsing처리 없고, 단순 텍스트로 처리
        */
       function test4() {
-        // var str = prompt(".wrapper태그 내용을 입력하세요.");
+        var str = prompt(".wrapper태그 내용을 입력하세요.");
         // console.log(str);//<h1>안녕</h1>
         var wrapper = document.querySelector(".wrapper");
-        // wrapper.innerText = str; // setter
+        wrapper.innerText = str; // setter
         console.log(wrapper.innerText); //getter
       }
 

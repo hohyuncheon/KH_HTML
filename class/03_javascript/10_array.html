@@ -123,8 +123,57 @@
     <input type="button" value="slice" onclick="test11();" />
     <input type="button" value="splice" onclick="test12();" />
     <input type="button" value="@실습문제" onclick="test13();" />
-    <ul id="hobby-list"></ul>
+    <input type="button" value="forEach" onclick="test14();" />
+
+    <hr />
+    <ul id="drink">
+      <li>coke</li>
+      <li>juice</li>
+      <li>coffee</li>
+      <li>beer</li>
+      <li>wine</li>
+    </ul>
+    <!-- input:b[onclick] -->
+    <input type="button" value="@실습문제#drink" onclick="test15();" />
     <script>
+      /**
+       * 배열 drink에 #drink태그의 자식li태그 텍스트를 추가할 것.
+       */
+      var test15 = function () {
+        var drink = [];
+        document.querySelectorAll("#drink>li").forEach(function (elem, i) {
+          console.log(i, elem);
+          drink.push(elem.innerHTML);
+        });
+        console.log(drink);
+      };
+
+      /**
+       * arr.forEach(callbackFunction(element, index){
+       *    //요소마다 실행구문
+       * })
+       *
+       * 유사배열도 사용가능.
+       *
+       */
+      var test14 = function () {
+        var arr = [1, 2, 3, 4, 5];
+        var sum = 0;
+        arr.forEach(function (elem, i) {
+          console.log(i, elem);
+          sum += elem;
+        });
+        // alert(sum);
+
+        var btnValues = [];
+        document
+          .querySelectorAll("input[type=button]")
+          .forEach(function (elem, i) {
+            console.log(i, elem);
+            btnValues.push(elem.value);
+          });
+        console.log(btnValues);
+      };
       /**
        * prompt를 이용해 사용자의 취미리스트를 입력받으세요.
        * 예) 농구,수영,캠핑,낚시

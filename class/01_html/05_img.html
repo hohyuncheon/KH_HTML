@@ -1,71 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>img</title>
 
     <style>
-        img{
-            width: 200px;
-        }
+      img {
+        width: 200px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>이미지관련</h1>
     <!--src =주소 alt =src주소가 틀릴때 대체 택스트-->
-    <img src="sample/image/flower1.PNG" alt="꽃사진"/>
+    <img src="sample/image/flower1.PNG" alt="꽃사진" />
 
-    <img src="https://en.pimg.jp/062/066/667/1/62066667.jpg" alt="설악산봄꽃"/>
+    <img src="https://en.pimg.jp/062/066/667/1/62066667.jpg" alt="설악산봄꽃" />
 
-    <hr>
+    <hr />
 
     <h2>절대값 | 상대값</h2>
     <div>
-        <!--px픽셀 절대값이므로, 화면(viewport)가 변해도 너비/높이가 변하지 않는다-->
-        <img src="sample/image/flower1.PNG" style="width: 250px;">
-        <img src="sample/image/flower2.PNG" style="width: 250px;">
-        <img src="sample/image/flower3.PNG" style="width: 250px;">
-        <img src="sample/image/flower4.PNG" style="width: 250px;">
+      <!--px픽셀 절대값이므로, 화면(viewport)가 변해도 너비/높이가 변하지 않는다-->
+      <img src="sample/image/flower1.PNG" style="width: 250px" />
+      <img src="sample/image/flower2.PNG" style="width: 250px" />
+      <img src="sample/image/flower3.PNG" style="width: 250px" />
+      <img src="sample/image/flower4.PNG" style="width: 250px" />
     </div>
-    <hr>
+    <hr />
     <div>
-        <!--%는 상대값이므로, 화면(viewprot) 대비 너비/높이값이 변한다 창을줄여도 사진이 내려가지않음-->
-        <img src="sample/image/flower1.PNG" style="width: 23%">
-        <img src="sample/image/flower2.PNG" style="width: 23%">
-        <img src="sample/image/flower3.PNG" style="width: 23%;">
-        <img src="sample/image/flower4.PNG" style="width: 23%">
+      <!--%는 상대값이므로, 화면(viewprot) 대비 너비/높이값이 변한다 창을줄여도 사진이 내려가지않음-->
+      <img src="sample/image/flower1.PNG" style="width: 23%" />
+      <img src="sample/image/flower2.PNG" style="width: 23%" />
+      <img src="sample/image/flower3.PNG" style="width: 23%" />
+      <img src="sample/image/flower4.PNG" style="width: 23%" />
     </div>
 
     <!--이지미누르면 링크로 이동하기 title은 부가설명? 여러군대에서 쓸수있다(마우스대고있으면 뜬다)-->
     <h2>이미지링크</h2>
     <a href="http://w3scholls.com" title="와삼스쿨로 이동하기">
-        <img src="sample/image/tiger.jpg" alt="타이거사진">
+      <img src="sample/image/tiger.jpg" alt="타이거사진" />
     </a>
 
     <!--하나의 사진에 여러링크걸기-->
     <h3>image map</h3>
-    <img src="sample/image/river1.PNG" style="width: 500px;" alt="두물머리사진" usemap="#mymap">
+    <img
+      src="sample/image/river1.PNG"
+      style="width: 500px"
+      alt="두물머리사진"
+      usemap="#mymap"
+    />
     <map name="mymap">
-        <!--모양 shape = rack |circle | poly-->
-        <!--좌표 coords =-->
-        <area shape="rect" coords="0,0,250,333" href="http://google.com" alt="구글이동">
-        <area shape="rect" coords="250,0,500,333" href="http://naver.com" alt="네이버로이동">
+      <!--모양 shape = rack |circle | poly-->
+      <!--좌표 coords =-->
+      <area
+        shape="rect"
+        coords="0,0,250,333"
+        href="http://google.com"
+        alt="구글이동"
+      />
+      <area
+        shape="rect"
+        coords="250,0,500,333"
+        href="http://naver.com"
+        alt="네이버로이동"
+      />
     </map>
 
     <h2>이미지 배치</h2>
     <div>
-        <img src="sample/image/forest1.PNG" style="float:left;">
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, blanditiis. Doloribus molestias nobis modi sed. Quo molestias quod aspernatur. Laudantium, error. Iure accusamus, nostrum incidunt sapiente temporibus at quisquam nihil.</span><span>Error ducimus neque veniam quo eaque unde officia voluptate necessitatibus quidem at, doloremque distinctio sit nam enim recusandae quos provident vel dicta! Qui beatae repellendus numquam quae illum, harum sequi.</span><span>Adipisci illo repudiandae reiciendis, atque accusantium, dolore culpa, sunt necessitatibus voluptas nobis accusamus magni repellat quos vel rem totam! Quo unde deserunt enim, optio totam consequuntur consectetur. Tempore, quam aperiam.</span><span>Incidunt unde beatae quasi. Atque labore error consequuntur accusantium, repudiandae vero beatae voluptates sapiente magni quis, possimus quae! Culpa suscipit cumque laboriosam provident aspernatur qui accusamus ad placeat repudiandae totam.</span><span>Dignissimos assumenda, quo deleniti error optio veritatis aperiam dolor doloremque sit! Ratione cum sit veniam quasi reprehenderit voluptatem, ducimus officiis perspiciatis beatae. Voluptatem fuga magni explicabo sit veniam, voluptas omnis.</span><span>Dolore provident blanditiis cum incidunt veritatis! Quisquam voluptatum officiis neque quaerat. Repellendus reprehenderit, voluptas cum molestias quibusdam libero totam velit fugit consectetur sapiente sequi temporibus enim unde maxime porro! Et?</span><span>Fuga, ipsa ipsum! Placeat et iure eos voluptates, necessitatibus amet atque, laborum quas perferendis nam eveniet voluptatum illo, fugiat tempore molestiae nemo ea accusamus earum optio nihil repellat? Illo, magnam!</span><span>Facere ipsa esse fugit earum nemo eligendi iure vel rerum alias facilis maiores dolorem reprehenderit consequatur amet, quae officiis eum voluptatibus nisi dolores! Sunt facilis voluptate quis exercitationem at eaque.</span><span>Reprehenderit totam nulla necessitatibus consectetur sint soluta labore! Placeat tenetur deserunt dolore natus? Esse fugit magnam voluptatem voluptatum consectetur deserunt, reprehenderit iure fugiat temporibus velit? Aut facere nesciunt inventore quidem.</span><span>Quod sit, fugiat molestias eum, consectetur, dolore cumque rerum provident a autem sint aperiam neque. Fugit debitis necessitatibus tempore. Voluptas sapiente nemo ipsa minima dignissimos architecto corporis vel animi eos?</span></p>
-
+      <img src="sample/image/forest1.PNG" style="float: left" />
+      <p>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+          blanditiis. Doloribus molestias nobis modi sed. Quo molestias quod
+          aspernatur. Laudantium, error. Iure accusamus, nostrum incidunt
+          sapiente temporibus at quisquam nihil.</span
+        ><span
+          >Error ducimus neque veniam quo eaque unde officia voluptate
+          necessitatibus quidem at, doloremque distinctio sit nam enim
+          recusandae quos provident vel dicta! Qui beatae repellendus numquam
+          quae illum, harum sequi.</span
+        ><span
+          >Adipisci illo repudiandae reiciendis, atque accusantium, dolore
+          culpa, sunt necessitatibus voluptas nobis accusamus magni repellat
+          quos vel rem totam! Quo unde deserunt enim, optio totam consequuntur
+          consectetur. Tempore, quam aperiam.</span
+        ><span
+          >Incidunt unde beatae quasi. Atque labore error consequuntur
+          accusantium, repudiandae vero beatae voluptates sapiente magni quis,
+          possimus quae! Culpa suscipit cumque laboriosam provident aspernatur
+          qui accusamus ad placeat repudiandae totam.</span
+        ><span
+          >Dignissimos assumenda, quo deleniti error optio veritatis aperiam
+          dolor doloremque sit! Ratione cum sit veniam quasi reprehenderit
+          voluptatem, ducimus officiis perspiciatis beatae. Voluptatem fuga
+          magni explicabo sit veniam, voluptas omnis.</span
+        ><span
+          >Dolore provident blanditiis cum incidunt veritatis! Quisquam
+          voluptatum officiis neque quaerat. Repellendus reprehenderit, voluptas
+          cum molestias quibusdam libero totam velit fugit consectetur sapiente
+          sequi temporibus enim unde maxime porro! Et?</span
+        ><span
+          >Fuga, ipsa ipsum! Placeat et iure eos voluptates, necessitatibus amet
+          atque, laborum quas perferendis nam eveniet voluptatum illo, fugiat
+          tempore molestiae nemo ea accusamus earum optio nihil repellat? Illo,
+          magnam!</span
+        ><span
+          >Facere ipsa esse fugit earum nemo eligendi iure vel rerum alias
+          facilis maiores dolorem reprehenderit consequatur amet, quae officiis
+          eum voluptatibus nisi dolores! Sunt facilis voluptate quis
+          exercitationem at eaque.</span
+        ><span
+          >Reprehenderit totam nulla necessitatibus consectetur sint soluta
+          labore! Placeat tenetur deserunt dolore natus? Esse fugit magnam
+          voluptatem voluptatum consectetur deserunt, reprehenderit iure fugiat
+          temporibus velit? Aut facere nesciunt inventore quidem.</span
+        ><span
+          >Quod sit, fugiat molestias eum, consectetur, dolore cumque rerum
+          provident a autem sint aperiam neque. Fugit debitis necessitatibus
+          tempore. Voluptas sapiente nemo ipsa minima dignissimos architecto
+          corporis vel animi eos?</span
+        >
+      </p>
     </div>
 
     <div>
-        <img src="sample/image/forest1.PNG" style="float:right;">
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, blanditiis. Doloribus molestias nobis modi sed. Quo molestias quod aspernatur. Laudantium, error. Iure accusamus, nostrum incidunt sapiente temporibus at quisquam nihil.</span><span>Error ducimus neque veniam quo eaque unde officia voluptate necessitatibus quidem at, doloremque distinctio sit nam enim recusandae quos provident vel dicta! Qui beatae repellendus numquam quae illum, harum sequi.</span><span>Adipisci illo repudiandae reiciendis, atque accusantium, dolore culpa, sunt necessitatibus voluptas nobis accusamus magni repellat quos vel rem totam! Quo unde deserunt enim, optio totam consequuntur consectetur. Tempore, quam aperiam.</span><span>Incidunt unde beatae quasi. Atque labore error consequuntur accusantium, repudiandae vero beatae voluptates sapiente magni quis, possimus quae! Culpa suscipit cumque laboriosam provident aspernatur qui accusamus ad placeat repudiandae totam.</span><span>Dignissimos assumenda, quo deleniti error optio veritatis aperiam dolor doloremque sit! Ratione cum sit veniam quasi reprehenderit voluptatem, ducimus officiis perspiciatis beatae. Voluptatem fuga magni explicabo sit veniam, voluptas omnis.</span><span>Dolore provident blanditiis cum incidunt veritatis! Quisquam voluptatum officiis neque quaerat. Repellendus reprehenderit, voluptas cum molestias quibusdam libero totam velit fugit consectetur sapiente sequi temporibus enim unde maxime porro! Et?</span><span>Fuga, ipsa ipsum! Placeat et iure eos voluptates, necessitatibus amet atque, laborum quas perferendis nam eveniet voluptatum illo, fugiat tempore molestiae nemo ea accusamus earum optio nihil repellat? Illo, magnam!</span><span>Facere ipsa esse fugit earum nemo eligendi iure vel rerum alias facilis maiores dolorem reprehenderit consequatur amet, quae officiis eum voluptatibus nisi dolores! Sunt facilis voluptate quis exercitationem at eaque.</span><span>Reprehenderit totam nulla necessitatibus consectetur sint soluta labore! Placeat tenetur deserunt dolore natus? Esse fugit magnam voluptatem voluptatum consectetur deserunt, reprehenderit iure fugiat temporibus velit? Aut facere nesciunt inventore quidem.</span><span>Quod sit, fugiat molestias eum, consectetur, dolore cumque rerum provident a autem sint aperiam neque. Fugit debitis necessitatibus tempore. Voluptas sapiente nemo ipsa minima dignissimos architecto corporis vel animi eos?</span></p>
-
+      <img src="sample/image/forest1.PNG" style="float: right" />
+      <p>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+          blanditiis. Doloribus molestias nobis modi sed. Quo molestias quod
+          aspernatur. Laudantium, error. Iure accusamus, nostrum incidunt
+          sapiente temporibus at quisquam nihil.</span
+        ><span
+          >Error ducimus neque veniam quo eaque unde officia voluptate
+          necessitatibus quidem at, doloremque distinctio sit nam enim
+          recusandae quos provident vel dicta! Qui beatae repellendus numquam
+          quae illum, harum sequi.</span
+        ><span
+          >Adipisci illo repudiandae reiciendis, atque accusantium, dolore
+          culpa, sunt necessitatibus voluptas nobis accusamus magni repellat
+          quos vel rem totam! Quo unde deserunt enim, optio totam consequuntur
+          consectetur. Tempore, quam aperiam.</span
+        ><span
+          >Incidunt unde beatae quasi. Atque labore error consequuntur
+          accusantium, repudiandae vero beatae voluptates sapiente magni quis,
+          possimus quae! Culpa suscipit cumque laboriosam provident aspernatur
+          qui accusamus ad placeat repudiandae totam.</span
+        ><span
+          >Dignissimos assumenda, quo deleniti error optio veritatis aperiam
+          dolor doloremque sit! Ratione cum sit veniam quasi reprehenderit
+          voluptatem, ducimus officiis perspiciatis beatae. Voluptatem fuga
+          magni explicabo sit veniam, voluptas omnis.</span
+        ><span
+          >Dolore provident blanditiis cum incidunt veritatis! Quisquam
+          voluptatum officiis neque quaerat. Repellendus reprehenderit, voluptas
+          cum molestias quibusdam libero totam velit fugit consectetur sapiente
+          sequi temporibus enim unde maxime porro! Et?</span
+        ><span
+          >Fuga, ipsa ipsum! Placeat et iure eos voluptates, necessitatibus amet
+          atque, laborum quas perferendis nam eveniet voluptatum illo, fugiat
+          tempore molestiae nemo ea accusamus earum optio nihil repellat? Illo,
+          magnam!</span
+        ><span
+          >Facere ipsa esse fugit earum nemo eligendi iure vel rerum alias
+          facilis maiores dolorem reprehenderit consequatur amet, quae officiis
+          eum voluptatibus nisi dolores! Sunt facilis voluptate quis
+          exercitationem at eaque.</span
+        ><span
+          >Reprehenderit totam nulla necessitatibus consectetur sint soluta
+          labore! Placeat tenetur deserunt dolore natus? Esse fugit magnam
+          voluptatem voluptatum consectetur deserunt, reprehenderit iure fugiat
+          temporibus velit? Aut facere nesciunt inventore quidem.</span
+        ><span
+          >Quod sit, fugiat molestias eum, consectetur, dolore cumque rerum
+          provident a autem sint aperiam neque. Fugit debitis necessitatibus
+          tempore. Voluptas sapiente nemo ipsa minima dignissimos architecto
+          corporis vel animi eos?</span
+        >
+      </p>
     </div>
-    
-</body>
+  </body>
 </html>
